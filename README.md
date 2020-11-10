@@ -1,6 +1,6 @@
 # to_doit
 
-A new Flutter project.
+A ToDo Flutter App with notifications/alarms like a reminder.
 
 ## Getting Started
 
