@@ -16,7 +16,7 @@ class _StadisticScreenState extends State<StadisticScreen> {
       body: Center(
         child: Text('Stadistics Screen'),
       ),
-      bottomNavigationBar: BottomAppBarMenu(active: true),
+      bottomNavigationBar: BottomAppBarMenu(active: CurrentPage.stadistic),
     );
   }
 }

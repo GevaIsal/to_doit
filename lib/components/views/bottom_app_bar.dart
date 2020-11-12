@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 
+enum CurrentPage { none, stadistic, home, settings }
+
 class BottomAppBarMenu extends StatefulWidget {
-  final bool active;
+  final CurrentPage active;
   BottomAppBarMenu({Key key, this.active}) : super(key: key);
 
   @override
@@ -22,7 +24,9 @@ class _BottomAppBarMenuState extends State<BottomAppBarMenu> {
             IconButton(
               icon: Icon(
                 Icons.stacked_bar_chart,
-                color: widget.active ? Colors.green : Colors.blueGrey,
+                color: widget.active == CurrentPage.stadistic
+                    ? Colors.green
+                    : Colors.blueGrey,
                 size: 30,
               ),
               onPressed: () {
@@ -32,22 +36,29 @@ class _BottomAppBarMenuState extends State<BottomAppBarMenu> {
                 });
               },
             ),
-            IconButton(
-              icon: Icon(
-                Icons.home,
-                color: widget.active ? Colors.green : Colors.blueGrey,
-                size: 30,
+            Container(
+              padding: EdgeInsets.only(top: 30),
+              child: IconButton(
+                icon: Icon(
+                  Icons.home,
+                  color: widget.active == CurrentPage.home
+                      ? Colors.green
+                      : Colors.blueGrey,
+                  size: 30,
+                ),
+                onPressed: () {
+                  setState(() {
+                    Navigator.of(context).pushReplacementNamed('/home_screen');
+                  });
+                },
               ),
-              onPressed: () {
-                setState(() {
-                  Navigator.of(context).pushReplacementNamed('/home_screen');
-                });
-              },
             ),
             IconButton(
               icon: Icon(
                 Icons.settings,
-                color: widget.active ? Colors.green : Colors.blueGrey,
+                color: widget.active == CurrentPage.settings
+                    ? Colors.green
+                    : Colors.blueGrey,
                 size: 30,
               ),
               onPressed: () {

@@ -16,7 +16,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
       body: Center(
         child: Text('Settings Screen'),
       ),
-      bottomNavigationBar: BottomAppBarMenu(active: true),
+      bottomNavigationBar: BottomAppBarMenu(active: CurrentPage.settings),
     );
   }
 }

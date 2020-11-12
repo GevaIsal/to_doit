@@ -23,9 +23,14 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  android_alarm_manager: ^0.4.5+17
   cupertino_icons: ^1.0.0
   flutter_mobx: ^1.1.0+2
+  flutter_swipe_action_cell: ^1.2.2
   mobx: ^1.2.1+4
+  numberpicker: ^1.2.1
+  provider: ^4.3.2+2
+  shared_preferences: ^0.5.12+4
 
 dev_dependencies:
   flutter_test:

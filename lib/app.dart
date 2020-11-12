@@ -18,7 +18,6 @@ class _AppState extends State<App> {
         primarySwatch: Colors.green,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      // home: HomeScreen(),
       onGenerateRoute: (RouteSettings settings) {
         switch (settings.name) {
           case '/home_screen':

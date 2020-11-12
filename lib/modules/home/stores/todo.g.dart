@@ -39,30 +39,6 @@ mixin _$TodoStore on _TodoStore, Store {
     });
   }
 
-  final _$_TodoStoreActionController = ActionController(name: '_TodoStore');
-
-  @override
-  void setTaskContent(String taskContent) {
-    final _$actionInfo = _$_TodoStoreActionController.startAction(
-        name: '_TodoStore.setTaskContent');
-    try {
-      return super.setTaskContent(taskContent);
-    } finally {
-      _$_TodoStoreActionController.endAction(_$actionInfo);
-    }
-  }
-
-  @override
-  dynamic setTaskState(bool taskState) {
-    final _$actionInfo = _$_TodoStoreActionController.startAction(
-        name: '_TodoStore.setTaskState');
-    try {
-      return super.setTaskState(taskState);
-    } finally {
-      _$_TodoStoreActionController.endAction(_$actionInfo);
-    }
-  }
-
   @override
   String toString() {
     return '''
